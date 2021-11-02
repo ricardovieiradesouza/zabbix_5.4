@@ -11,7 +11,4 @@ Adicionado o usuario mysqladmin sem senha para monitoramento:
 [client]
 password = password
 
-# This group is not read by mysql client library,
-# If you use the same .cnf file for MySQL and MariaDB,
-# use it for MariaDB-only client options
-[client-mariadb]
+
