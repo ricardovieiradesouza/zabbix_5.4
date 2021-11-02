@@ -1,0 +1,35 @@
+Monitoramento do asterisk via zabbix através de api
+
+
+arquivo:
+/etc/asterisk/ari.conf
+
+[user]
+type=user
+password=passwd
+password_format=plain
+read_only=yes
+
+
+
+/etc/asterisk/http.conf
+
+[general]
+enabled=yes
+bindaddr=0.0.0.0
+uploads = /var/lib/asterisk/uploads/
+
+
+/etc/asterisk/manager.conf
+
+[user]
+secret = passwd
+deny=0.0.0.0/0.0.0.0
+permit=0.0.0.0/0.0.0.0
+
+
+Documentação utilizada 
+https://wiki.asterisk.org/wiki/display/AST/Getting+Started+with+ARI#
+
+https://wiki.asterisk.org/wiki/display/AST/Asterisk+16+Channels+REST+API
+
